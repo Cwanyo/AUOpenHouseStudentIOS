@@ -17,8 +17,8 @@ class SideMenuTableViewController: UITableViewController {
             NotificationCenter.default.post(name: NSNotification.Name("ShowBulletin"), object: nil)
         case 2:
             NotificationCenter.default.post(name: NSNotification.Name("ShowEvents"), object: nil)
-        case 3:
-            print("logout")
+        case 4:
+            NotificationCenter.default.post(name: NSNotification.Name("logout"), object: nil)
         default:
             break
         }

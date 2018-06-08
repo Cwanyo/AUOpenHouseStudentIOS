@@ -308,6 +308,70 @@
             </objects>
             <point key="canvasLocation" x="903" y="117"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="vyk-jq-NGk">
+            <objects>
+                <viewController storyboardIdentifier="loginViewController" id="D9c-TA-Nms" customClass="LoginViewController" customModule="TaxiReviewIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8qS-ec-Lfk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnW-AQ-oLr">
+                                <rect key="frame" x="87" y="352" width="200" height="32"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.1960784314" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BnW-AQ-oLr" secondAttribute="height" multiplier="25:4" id="3j7-lz-Sku"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Google">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleOnClick:" destination="D9c-TA-Nms" eventType="touchUpInside" id="ZWF-Cf-9D8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhX-rN-mal">
+                                <rect key="frame" x="87" y="283" width="200" height="32"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uhX-rN-mal" secondAttribute="height" multiplier="25:4" id="RTR-te-byV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- OR -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8re-Q0-At6">
+                                <rect key="frame" x="163" y="323" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-i7-QBo">
+                                <rect key="frame" x="124.5" y="216" width="126" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="0.25347222219999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rkc-i7-QBo" firstAttribute="centerX" secondItem="c6c-ho-l5C" secondAttribute="centerX" id="Dwg-uk-tZb"/>
+                            <constraint firstItem="8re-Q0-At6" firstAttribute="centerY" secondItem="8qS-ec-Lfk" secondAttribute="centerY" id="Pxg-Pd-a9B"/>
+                            <constraint firstItem="uhX-rN-mal" firstAttribute="top" secondItem="Rkc-i7-QBo" secondAttribute="bottom" constant="37" id="SnR-Wf-6gD"/>
+                            <constraint firstItem="8re-Q0-At6" firstAttribute="centerX" secondItem="8qS-ec-Lfk" secondAttribute="centerX" id="V7V-WK-MCF"/>
+                            <constraint firstItem="BnW-AQ-oLr" firstAttribute="top" secondItem="8re-Q0-At6" secondAttribute="bottom" constant="8" id="hK2-9y-ptq"/>
+                            <constraint firstItem="8re-Q0-At6" firstAttribute="top" secondItem="uhX-rN-mal" secondAttribute="bottom" constant="8" id="izB-YZ-mIR"/>
+                            <constraint firstItem="uhX-rN-mal" firstAttribute="centerX" secondItem="c6c-ho-l5C" secondAttribute="centerX" id="lIl-Xf-5Fx"/>
+                            <constraint firstItem="BnW-AQ-oLr" firstAttribute="centerX" secondItem="c6c-ho-l5C" secondAttribute="centerX" id="nEC-ih-YOi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c6c-ho-l5C"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9l-f8-aaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="-595"/>
+        </scene>
     </scenes>
     <resources>
         <image name="menu" width="25" height="25"/>
