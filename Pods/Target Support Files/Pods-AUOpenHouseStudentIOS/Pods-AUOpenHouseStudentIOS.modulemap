@@ -1,0 +1,6 @@
+framework module Pods_AUOpenHouseStudentIOS {
+  umbrella header "Pods-AUOpenHouseStudentIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

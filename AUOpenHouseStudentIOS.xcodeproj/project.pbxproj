@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F00CE3120CAA7A9003B1FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE3020CAA7A9003B1FC5 /* AppDelegate.swift */; };
+		1F00CE3620CAA7A9003B1FC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CE3420CAA7A9003B1FC5 /* Main.storyboard */; };
+		1F00CE3920CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE3720CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodeld */; };
+		1F00CE3B20CAA7A9003B1FC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CE3A20CAA7A9003B1FC5 /* Assets.xcassets */; };
+		1F00CE3E20CAA7A9003B1FC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CE3C20CAA7A9003B1FC5 /* LaunchScreen.storyboard */; };
+		1F00CE4C20CAB92C003B1FC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CE4B20CAB92C003B1FC5 /* GoogleService-Info.plist */; };
+		1F00CE4E20CABB64003B1FC5 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE4D20CABB64003B1FC5 /* ContainerViewController.swift */; };
+		1F00CE5020CABBC1003B1FC5 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE4F20CABBC1003B1FC5 /* SideMenuTableViewController.swift */; };
+		C64C78EF3DC0D218FA0053A8 /* Pods_AUOpenHouseStudentIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396FA9D400C2C1115563C847 /* Pods_AUOpenHouseStudentIOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F00CE2D20CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUOpenHouseStudentIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F00CE3020CAA7A9003B1FC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F00CE3520CAA7A9003B1FC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F00CE3820CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AUOpenHouseStudentIOS.xcdatamodel; sourceTree = "<group>"; };
+		1F00CE3A20CAA7A9003B1FC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F00CE3D20CAA7A9003B1FC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F00CE3F20CAA7A9003B1FC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F00CE4B20CAB92C003B1FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F00CE4D20CABB64003B1FC5 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		1F00CE4F20CABBC1003B1FC5 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		396FA9D400C2C1115563C847 /* Pods_AUOpenHouseStudentIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUOpenHouseStudentIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A5F6E43DB96951EB705AC9 /* Pods-AUOpenHouseStudentIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUOpenHouseStudentIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS.release.xcconfig"; sourceTree = "<group>"; };
+		E2C5EB35945D4D83F4A0A9F6 /* Pods-AUOpenHouseStudentIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUOpenHouseStudentIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F00CE2A20CAA7A9003B1FC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64C78EF3DC0D218FA0053A8 /* Pods_AUOpenHouseStudentIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D7DB256500B5D26F94CF2A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				396FA9D400C2C1115563C847 /* Pods_AUOpenHouseStudentIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F00CE2420CAA7A9003B1FC5 = {
+			isa = PBXGroup;
+			children = (
+				1F00CE2F20CAA7A9003B1FC5 /* AUOpenHouseStudentIOS */,
+				1F00CE2E20CAA7A9003B1FC5 /* Products */,
+				D0AE82D9D930EAF6D0CD21DA /* Pods */,
+				1D7DB256500B5D26F94CF2A6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F00CE2E20CAA7A9003B1FC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F00CE2D20CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F00CE2F20CAA7A9003B1FC5 /* AUOpenHouseStudentIOS */ = {
+			isa = PBXGroup;
+			children = (
+				1F00CE4620CAAAC6003B1FC5 /* Models */,
+				1F00CE4720CAAACE003B1FC5 /* Views */,
+				1F00CE4820CAAADA003B1FC5 /* Controllers */,
+				1F00CE3020CAA7A9003B1FC5 /* AppDelegate.swift */,
+				1F00CE3420CAA7A9003B1FC5 /* Main.storyboard */,
+				1F00CE3A20CAA7A9003B1FC5 /* Assets.xcassets */,
+				1F00CE3C20CAA7A9003B1FC5 /* LaunchScreen.storyboard */,
+				1F00CE3F20CAA7A9003B1FC5 /* Info.plist */,
+				1F00CE4B20CAB92C003B1FC5 /* GoogleService-Info.plist */,
+				1F00CE3720CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodeld */,
+			);
+			path = AUOpenHouseStudentIOS;
+			sourceTree = "<group>";
+		};
+		1F00CE4620CAAAC6003B1FC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F00CE4720CAAACE003B1FC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F00CE4F20CABBC1003B1FC5 /* SideMenuTableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F00CE4820CAAADA003B1FC5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F00CE4D20CABB64003B1FC5 /* ContainerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D0AE82D9D930EAF6D0CD21DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2C5EB35945D4D83F4A0A9F6 /* Pods-AUOpenHouseStudentIOS.debug.xcconfig */,
+				40A5F6E43DB96951EB705AC9 /* Pods-AUOpenHouseStudentIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F00CE2C20CAA7A9003B1FC5 /* AUOpenHouseStudentIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F00CE4220CAA7A9003B1FC5 /* Build configuration list for PBXNativeTarget "AUOpenHouseStudentIOS" */;
+			buildPhases = (
+				48F98E19EFCE81E011695469 /* [CP] Check Pods Manifest.lock */,
+				1F00CE2920CAA7A9003B1FC5 /* Sources */,
+				1F00CE2A20CAA7A9003B1FC5 /* Frameworks */,
+				1F00CE2B20CAA7A9003B1FC5 /* Resources */,
+				639655EF69A03397B98AF286 /* [CP] Embed Pods Frameworks */,
+				C8FE1076AE706936C818E501 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AUOpenHouseStudentIOS;
+			productName = AUOpenHouseStudentIOS;
+			productReference = 1F00CE2D20CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F00CE2520CAA7A9003B1FC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					1F00CE2C20CAA7A9003B1FC5 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = 1F00CE2820CAA7A9003B1FC5 /* Build configuration list for PBXProject "AUOpenHouseStudentIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F00CE2420CAA7A9003B1FC5;
+			productRefGroup = 1F00CE2E20CAA7A9003B1FC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F00CE2C20CAA7A9003B1FC5 /* AUOpenHouseStudentIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F00CE2B20CAA7A9003B1FC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F00CE3E20CAA7A9003B1FC5 /* LaunchScreen.storyboard in Resources */,
+				1F00CE4C20CAB92C003B1FC5 /* GoogleService-Info.plist in Resources */,
+				1F00CE3B20CAA7A9003B1FC5 /* Assets.xcassets in Resources */,
+				1F00CE3620CAA7A9003B1FC5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48F98E19EFCE81E011695469 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AUOpenHouseStudentIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		639655EF69A03397B98AF286 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8FE1076AE706936C818E501 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F00CE2920CAA7A9003B1FC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F00CE3920CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodeld in Sources */,
+				1F00CE4E20CABB64003B1FC5 /* ContainerViewController.swift in Sources */,
+				1F00CE3120CAA7A9003B1FC5 /* AppDelegate.swift in Sources */,
+				1F00CE5020CABBC1003B1FC5 /* SideMenuTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F00CE3420CAA7A9003B1FC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F00CE3520CAA7A9003B1FC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F00CE3C20CAA7A9003B1FC5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F00CE3D20CAA7A9003B1FC5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F00CE4020CAA7A9003B1FC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F00CE4120CAA7A9003B1FC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F00CE4320CAA7A9003B1FC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C5EB35945D4D83F4A0A9F6 /* Pods-AUOpenHouseStudentIOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A4P88C6H9;
+				INFOPLIST_FILE = AUOpenHouseStudentIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wvn.AUOpenHouseStudentIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F00CE4420CAA7A9003B1FC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40A5F6E43DB96951EB705AC9 /* Pods-AUOpenHouseStudentIOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A4P88C6H9;
+				INFOPLIST_FILE = AUOpenHouseStudentIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wvn.AUOpenHouseStudentIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F00CE2820CAA7A9003B1FC5 /* Build configuration list for PBXProject "AUOpenHouseStudentIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F00CE4020CAA7A9003B1FC5 /* Debug */,
+				1F00CE4120CAA7A9003B1FC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F00CE4220CAA7A9003B1FC5 /* Build configuration list for PBXNativeTarget "AUOpenHouseStudentIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F00CE4320CAA7A9003B1FC5 /* Debug */,
+				1F00CE4420CAA7A9003B1FC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1F00CE3720CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1F00CE3820CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodel */,
+			);
+			currentVersion = 1F00CE3820CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodel */;
+			path = AUOpenHouseStudentIOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1F00CE2520CAA7A9003B1FC5 /* Project object */;
+}
