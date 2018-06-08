@@ -57,6 +57,7 @@ class RestApiProvider {
             switch response.result {
             case .success:
                 print("API: getMyPoints")
+                // TODO - cast to object
                 if let json = response.result.value {
                     print("JSON: \(json)")
                 }
