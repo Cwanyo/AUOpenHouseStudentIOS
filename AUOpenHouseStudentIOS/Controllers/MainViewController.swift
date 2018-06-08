@@ -61,8 +61,10 @@ class MainViewController: UIViewController {
     }
     
     func showStudentPoints(){
-        RestApiProvider.getMyPoints { (t) in
-            print(t)
+        RestApiProvider.getMyPoints { (s, p) in
+            if s {
+                print(p)
+            }
         }
     }
     

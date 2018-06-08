@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class RestApiProvider {
     
@@ -50,21 +51,25 @@ class RestApiProvider {
         
     }
     
-    static func getMyPoints(completion: @escaping (Bool) -> ()) {
+    static func getMyPoints(completion: @escaping (Bool,Int) -> ()) {
         let path = url+"/mygamepoints"
         
         Alamofire.request(path, method: .get).validate().responseJSON { response in
             switch response.result {
-            case .success:
+            case .success(let json):
                 print("API: getMyPoints")
-                // TODO - cast to object
-                if let json = response.result.value {
-                    print("JSON: \(json)")
+                               
+                var json = JSON(json)
+                
+                if let points = json[0]["Points"].int {
+                    completion(true,points)
+                }else{
+                    completion(true,0)
                 }
-                completion(true)
+                
             case .failure(let error):
                 print("API Error: getMyPoints", error)
-                completion(false)
+                completion(false,0)
             }
         }
     }
