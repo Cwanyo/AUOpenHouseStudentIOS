@@ -19,6 +19,7 @@
 		1F00CE5820CAD260003B1FC5 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE5720CAD260003B1FC5 /* EventsViewController.swift */; };
 		1F00CE5A20CAD501003B1FC5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE5920CAD501003B1FC5 /* MainViewController.swift */; };
 		1F00CE5C20CAE144003B1FC5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE5B20CAE144003B1FC5 /* LoginViewController.swift */; };
+		1F00CE6120CAFB26003B1FC5 /* RestApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE6020CAFB25003B1FC5 /* RestApiProvider.swift */; };
 		C64C78EF3DC0D218FA0053A8 /* Pods_AUOpenHouseStudentIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396FA9D400C2C1115563C847 /* Pods_AUOpenHouseStudentIOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		1F00CE5720CAD260003B1FC5 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		1F00CE5920CAD501003B1FC5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1F00CE5B20CAE144003B1FC5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F00CE6020CAFB25003B1FC5 /* RestApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiProvider.swift; sourceTree = "<group>"; };
 		396FA9D400C2C1115563C847 /* Pods_AUOpenHouseStudentIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUOpenHouseStudentIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A5F6E43DB96951EB705AC9 /* Pods-AUOpenHouseStudentIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUOpenHouseStudentIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS.release.xcconfig"; sourceTree = "<group>"; };
 		E2C5EB35945D4D83F4A0A9F6 /* Pods-AUOpenHouseStudentIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUOpenHouseStudentIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		1F00CE2F20CAA7A9003B1FC5 /* AUOpenHouseStudentIOS */ = {
 			isa = PBXGroup;
 			children = (
+				1F00CE5D20CAFA7C003B1FC5 /* Services */,
 				1F00CE4620CAAAC6003B1FC5 /* Models */,
 				1F00CE4720CAAACE003B1FC5 /* Views */,
 				1F00CE4820CAAADA003B1FC5 /* Controllers */,
@@ -122,6 +125,14 @@
 				1F00CE5B20CAE144003B1FC5 /* LoginViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1F00CE5D20CAFA7C003B1FC5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1F00CE6020CAFB25003B1FC5 /* RestApiProvider.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D0AE82D9D930EAF6D0CD21DA /* Pods */ = {
@@ -280,6 +291,7 @@
 			files = (
 				1F00CE5820CAD260003B1FC5 /* EventsViewController.swift in Sources */,
 				1F00CE3920CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodeld in Sources */,
+				1F00CE6120CAFB26003B1FC5 /* RestApiProvider.swift in Sources */,
 				1F00CE4E20CABB64003B1FC5 /* ContainerViewController.swift in Sources */,
 				1F00CE3120CAA7A9003B1FC5 /* AppDelegate.swift in Sources */,
 				1F00CE5C20CAE144003B1FC5 /* LoginViewController.swift in Sources */,
