@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import Alamofire
 
 class MainViewController: UIViewController {
     
@@ -22,16 +23,34 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if(user == nil){
-                // if user not login, show loginViewController
-                print("not log in")
+                // user not login, show loginViewController
+                print("Firebase: not login")
                 self.navigationController?.isNavigationBarHidden = true
                 self.loginViewController.view.isHidden = false
                 
             }else{
-                // if user already logged in, show main
-                print("logged in")
-                self.navigationController?.isNavigationBarHidden = false
-                self.loginViewController.view.isHidden = true
+                // user already logged in firebase
+                print("Firebase: logged in")
+                
+                // login in api service
+                let currentUser = Auth.auth().currentUser
+                currentUser?.getIDTokenForcingRefresh(true) { idToken, error in
+                    if let error = error {
+                        print("ERROR : geting token",error)
+                        return;
+                    }
+                    
+                    RestApiProvider.login(idToken: idToken!, completion: { (success) in
+                        if success {
+                            self.navigationController?.isNavigationBarHidden = false
+                            self.loginViewController.view.isHidden = true
+                            self.showStudentPoints()
+                        } else {
+                            // TODO - popup alert
+                            print("ERROR : Cannot connect to server")
+                        }
+                    })
+                }
                 
             }
         }
@@ -39,6 +58,14 @@ class MainViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         Auth.auth().removeStateDidChangeListener(handle!)
+    }
+    
+    func showStudentPoints(){
+        RestApiProvider.getMyPoints { (s, p) in
+            if s {
+                print(p)
+            }
+        }
     }
     
     // Login view
@@ -102,9 +129,16 @@ class MainViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            print ("Successfully signing out")
+            print("Successfully signing out from firebase")
+            
+            RestApiProvider.logout { (success) in
+                if success {
+                    print("Successfully signing out from api")
+                }
+            }
+            
         } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+            print("Error signing out: %@", signOutError)
         }
     }
     
