@@ -27,6 +27,8 @@
 		1FFC942F20CC000B00F781AA /* Faculty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC942920CC000B00F781AA /* Faculty+CoreDataProperties.swift */; };
 		1FFC943020CC000B00F781AA /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC942A20CC000B00F781AA /* Event+CoreDataClass.swift */; };
 		1FFC943120CC000B00F781AA /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC942B20CC000B00F781AA /* Event+CoreDataProperties.swift */; };
+		1FFC943320CC056400F781AA /* FacultyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC943220CC056400F781AA /* FacultyTableViewCell.swift */; };
+		1FFC943520CC0A2400F781AA /* FacultyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC943420CC0A2400F781AA /* FacultyDetailViewController.swift */; };
 		C64C78EF3DC0D218FA0053A8 /* Pods_AUOpenHouseStudentIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396FA9D400C2C1115563C847 /* Pods_AUOpenHouseStudentIOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		1FFC942920CC000B00F781AA /* Faculty+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Faculty+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1FFC942A20CC000B00F781AA /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1FFC942B20CC000B00F781AA /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1FFC943220CC056400F781AA /* FacultyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyTableViewCell.swift; sourceTree = "<group>"; };
+		1FFC943420CC0A2400F781AA /* FacultyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyDetailViewController.swift; sourceTree = "<group>"; };
 		396FA9D400C2C1115563C847 /* Pods_AUOpenHouseStudentIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUOpenHouseStudentIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A5F6E43DB96951EB705AC9 /* Pods-AUOpenHouseStudentIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUOpenHouseStudentIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS.release.xcconfig"; sourceTree = "<group>"; };
 		E2C5EB35945D4D83F4A0A9F6 /* Pods-AUOpenHouseStudentIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUOpenHouseStudentIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AUOpenHouseStudentIOS/Pods-AUOpenHouseStudentIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				1F00CE4F20CABBC1003B1FC5 /* SideMenuTableViewController.swift */,
+				1FFC943220CC056400F781AA /* FacultyTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 				1F00CE4D20CABB64003B1FC5 /* ContainerViewController.swift */,
 				1F00CE5920CAD501003B1FC5 /* MainViewController.swift */,
 				1F00CE5320CAD233003B1FC5 /* BulletinViewController.swift */,
+				1FFC943420CC0A2400F781AA /* FacultyDetailViewController.swift */,
 				1F00CE5720CAD260003B1FC5 /* EventsViewController.swift */,
 				1F00CE5B20CAE144003B1FC5 /* LoginViewController.swift */,
 			);
@@ -322,9 +328,11 @@
 				1FFC942E20CC000B00F781AA /* Faculty+CoreDataClass.swift in Sources */,
 				1FFC942520CBEFD800F781AA /* PersistenceService.swift in Sources */,
 				1F00CE5C20CAE144003B1FC5 /* LoginViewController.swift in Sources */,
+				1FFC943520CC0A2400F781AA /* FacultyDetailViewController.swift in Sources */,
 				1F00CE5020CABBC1003B1FC5 /* SideMenuTableViewController.swift in Sources */,
 				1F00CE5420CAD233003B1FC5 /* BulletinViewController.swift in Sources */,
 				1FFC942C20CC000B00F781AA /* Major+CoreDataClass.swift in Sources */,
+				1FFC943320CC056400F781AA /* FacultyTableViewCell.swift in Sources */,
 				1F00CE5A20CAD501003B1FC5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

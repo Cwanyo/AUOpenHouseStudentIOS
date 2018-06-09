@@ -2,7 +2,7 @@
 //  Major+CoreDataProperties.swift
 //  AUOpenHouseStudentIOS
 //
-//  Created by ios-project on 9/6/2561 BE.
+//  Created by ios-project on 10/6/2561 BE.
 //
 //
 
