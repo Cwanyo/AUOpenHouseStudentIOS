@@ -21,5 +21,6 @@ extension Major {
     @NSManaged public var mid: Int32
     @NSManaged public var name: String?
     @NSManaged public var website: URL?
+    @NSManaged public var faculty: Faculty?
 
 }

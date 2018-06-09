@@ -25,6 +25,7 @@
         <attribute name="location_longitude" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="website" attributeType="URI" syncable="YES"/>
+        <relationship name="majors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Major" inverseName="faculty" inverseEntity="Major" syncable="YES"/>
     </entity>
     <entity name="Major" representedClassName="Major" syncable="YES">
         <attribute name="fid" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -32,10 +33,11 @@
         <attribute name="mid" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="website" optional="YES" attributeType="URI" syncable="YES"/>
+        <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="majors" inverseEntity="Faculty" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Faculty" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="Major" positionX="-54" positionY="45" width="128" height="120"/>
+        <element name="Faculty" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="Major" positionX="-54" positionY="45" width="128" height="135"/>
         <element name="Event" positionX="-36" positionY="72" width="128" height="270"/>
     </elements>
 </model>

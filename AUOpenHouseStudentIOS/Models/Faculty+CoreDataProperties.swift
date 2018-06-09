@@ -23,5 +23,23 @@ extension Faculty {
     @NSManaged public var location_longitude: Float
     @NSManaged public var name: String?
     @NSManaged public var website: URL?
+    @NSManaged public var majors: NSSet?
+
+}
+
+// MARK: Generated accessors for majors
+extension Faculty {
+
+    @objc(addMajorsObject:)
+    @NSManaged public func addToMajors(_ value: Major)
+
+    @objc(removeMajorsObject:)
+    @NSManaged public func removeFromMajors(_ value: Major)
+
+    @objc(addMajors:)
+    @NSManaged public func addToMajors(_ values: NSSet)
+
+    @objc(removeMajors:)
+    @NSManaged public func removeFromMajors(_ values: NSSet)
 
 }
