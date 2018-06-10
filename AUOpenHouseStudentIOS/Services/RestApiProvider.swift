@@ -13,7 +13,12 @@ class RestApiProvider {
     
     static let url = "https://auopenhouse.herokuapp.com/api/student"
     
-    static func login(idToken: String, completion: @escaping (Bool) -> ()) {
+    struct Response {
+        let isSuccess: Bool
+        let message: String
+    }
+    
+    static func login(idToken: String, completion: @escaping (Response) -> ()) {
         let path = url+"/login"
         
         let parameters: Parameters = [
@@ -22,12 +27,18 @@ class RestApiProvider {
         
         Alamofire.request(path, method: .put, parameters: parameters).validate().responseJSON { response in
             switch response.result {
-            case .success:
+            case .success(let json):
                 print("API: login")
-                completion(true)
+                
+                let json = JSON(json)
+                let isSuccess = json["isSuccess"].bool
+                let message = json["message"].string
+                
+                completion(Response(isSuccess: isSuccess!, message: message!))
+                
             case .failure(let error):
                 print("API Error: login", error)
-                completion(false)
+                completion(Response(isSuccess: false, message: "Could not connect to server"))
             }
         }
     }
@@ -257,13 +268,148 @@ class RestApiProvider {
         }
     }
     
+    static func getMyEvents(completion: @escaping (Bool,[Event]) -> ()) {
+        let path = url+"/myevents"
+        
+        Alamofire.request(path, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let json):
+                print("API: getMyEvents")
+                
+                var tempE = [Event]()
+                
+                if let json = JSON(json).array {
+                    for j in json {
+                        let e = Event(context: PresistenceService.context)
+                        
+                        if let eid = j["EID"].int32 {
+                            e.eid = eid
+                        }
+                        if let fid = j["FID"].int32 {
+                            e.fid = fid
+                        }
+                        if let faculty_name = j["Faculty_Name"].string {
+                            e.faculty_name = faculty_name
+                        }
+                        if let icon = j["Icon"].url {
+                            e.icon = icon
+                        }
+                        if let image = j["Image"].url {
+                            e.image = image
+                        }
+                        if let info = j["Info"].string {
+                            e.info = info
+                        }
+                        if let lat = j["Location_Latitude"].double {
+                            e.location_latitude = lat
+                        }
+                        if let lon = j["Location_Longitude"].double {
+                            e.location_longitude = lon
+                        }
+                        if let mid = j["MID"].int32 {
+                            e.mid = mid
+                        }
+                        if let name = j["Major_Name"].string {
+                            e.major_name = name
+                        }
+                        if let name = j["Name"].string {
+                            e.name = name
+                        }
+                        if let state = j["State"].int16 {
+                            e.state = state
+                        }
+                        if let tid = j["TID"].int32 {
+                            e.tid = tid
+                        }
+                        if let time_start = j["Time_Start"].string {
+                            e.time_start = time_start
+                        }
+                        if let time_end = j["Time_End"].string {
+                            e.time_end = time_end
+                        }
+                        
+                        // print(e)
+                        // TODO - save core data
+                        // PresistenceService.saveContext()
+                        tempE.append(e)
+                    }
+                    
+                    completion(true, tempE)
+                }
+                
+            case .failure(let error):
+                print("API Error: getMyEvents", error)
+                completion(false, [Event]())
+            }
+        }
+    }
     
+    static func checkMyEventAttend(tid: Int32, completion: @escaping (Bool, Bool) -> ()) {
+        let path = url+"/myevents/\(tid)"
+        
+        Alamofire.request(path, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let json):
+                print("API: checkMyEventAttend")
+                
+                if let json = JSON(json).array {
+                    
+                    if json.count == 0 {
+                        completion(true, false)
+                    }else{
+                        completion(true,true)
+                    }
+                    
+                }
+                
+            case .failure(let error):
+                print("API Error: checkMyEventAttend", error)
+                completion(false,false)
+            }
+        }
+    }
     
+    static func joinEvent(tid: Int32, completion: @escaping (Response) -> ()) {
+        let path = url+"/myevents/\(tid)"
+        
+        Alamofire.request(path, method: .post).validate().responseJSON { response in
+            switch response.result {
+            case .success(let json):
+                print("API: joinEvent")
+                
+                let json = JSON(json)
+                let isSuccess = json["isSuccess"].bool
+                let message = json["message"].string
+                
+                completion(Response(isSuccess: isSuccess!, message: message!))
+                
+            case .failure(let error):
+                print("API Error: joinEvent", error)
+                completion(Response(isSuccess: false, message: "Could not connect to server"))
+            }
+        }
+    }
     
-    
-    
-    
-    
+    static func leaveEvent(tid: Int32, completion: @escaping (Response) -> ()) {
+        let path = url+"/myevents/\(tid)"
+        
+        Alamofire.request(path, method: .delete).validate().responseJSON { response in
+            switch response.result {
+            case .success(let json):
+                print("API: leaveEvent")
+                
+                let json = JSON(json)
+                let isSuccess = json["isSuccess"].bool
+                let message = json["message"].string
+                
+                completion(Response(isSuccess: isSuccess!, message: message!))
+                
+            case .failure(let error):
+                print("API Error: leaveEvent", error)
+                completion(Response(isSuccess: false, message: "Could not connect to server"))
+            }
+        }
+    }
     
     
     

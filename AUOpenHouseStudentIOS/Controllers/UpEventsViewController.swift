@@ -19,7 +19,9 @@ class UpEventsViewController: UIViewController {
         
         tb_upevents.dataSource = self
         tb_upevents.delegate = self
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         getListOfUpcomingEvets()
     }
     
@@ -69,13 +71,12 @@ extension UpEventsViewController: UITableViewDataSource, UITableViewDelegate {
         return newDate
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "showFacultyDetail", sender: self)
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let facultyDetailVC = segue.destination as? FacultyDetailViewController else {return}
-//        facultyDetailVC.faculty = upevents[(tb_faculties.indexPathForSelectedRow?.row)!]
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showEventDetail", sender: self)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let eventDetailVC = segue.destination as? EventDetailViewController else {return}
+        eventDetailVC.event = upevents[(tb_upevents.indexPathForSelectedRow?.row)!]
+    }
 }

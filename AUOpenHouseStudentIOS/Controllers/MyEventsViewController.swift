@@ -19,12 +19,14 @@ class MyEventsViewController: UIViewController {
         
         tb_myevents.dataSource = self
         tb_myevents.delegate = self
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         getListOfUpcomingEvets()
     }
     
     func getListOfUpcomingEvets(){
-        RestApiProvider.getUpEvents { (s, e) in
+        RestApiProvider.getMyEvents { (s, e) in
             if s {
                 self.myevents = e
             } else {
@@ -68,6 +70,15 @@ extension MyEventsViewController: UITableViewDataSource, UITableViewDelegate {
         dateFormatter.dateFormat = "dd MMM HH:mm"
         let newDate = dateFormatter.string(from: date!)
         return newDate
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showEventDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let eventDetailVC = segue.destination as? EventDetailViewController else {return}
+        eventDetailVC.event = myevents[(tb_myevents.indexPathForSelectedRow?.row)!]
     }
     
 }
