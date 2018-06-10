@@ -14,16 +14,24 @@ class BulletinViewController: UIViewController {
     
     var faculties = [Faculty]()
     
+    lazy var refreshControl: UIRefreshControl = {
+        let rC = UIRefreshControl()
+        rC.tintColor = .black
+        rC.addTarget(self, action: #selector(getListOfFaculties), for: .valueChanged)
+        return rC
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tb_faculties.dataSource = self
         tb_faculties.delegate = self
+        tb_faculties.refreshControl = refreshControl
 
         getListOfFaculties()
     }
     
-    func getListOfFaculties(){
+    @objc func getListOfFaculties(){
         RestApiProvider.getFaculties { (s, f) in
             if s {
                 self.faculties = f
@@ -31,6 +39,7 @@ class BulletinViewController: UIViewController {
                 // load from coredata
             }
             self.tb_faculties.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
 

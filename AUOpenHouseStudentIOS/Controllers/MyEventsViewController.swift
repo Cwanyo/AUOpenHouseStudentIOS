@@ -14,18 +14,27 @@ class MyEventsViewController: UIViewController {
     
     var myevents = [Event]()
     
+    lazy var refreshControl: UIRefreshControl = {
+        let rC = UIRefreshControl()
+        rC.tintColor = .black
+        rC.addTarget(self, action: #selector(getListOfUpcomingEvets), for: .valueChanged)
+        return rC
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tb_myevents.dataSource = self
         tb_myevents.delegate = self
+        
+        tb_myevents.refreshControl = refreshControl
     }
     
     override func viewDidAppear(_ animated: Bool) {
         getListOfUpcomingEvets()
     }
     
-    func getListOfUpcomingEvets(){
+    @objc func getListOfUpcomingEvets(){
         RestApiProvider.getMyEvents { (s, e) in
             if s {
                 self.myevents = e
@@ -33,9 +42,9 @@ class MyEventsViewController: UIViewController {
                 // load from coredata
             }
             self.tb_myevents.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
-
 
 }
 
