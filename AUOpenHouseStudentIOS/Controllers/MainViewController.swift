@@ -40,13 +40,14 @@ class MainViewController: UIViewController {
                         return;
                     }
                     
-                    RestApiProvider.login(idToken: idToken!, completion: { (success) in
-                        if success {
+                    RestApiProvider.login(idToken: idToken!, completion: { (res) in
+                        if res.isSuccess {
                             self.navigationController?.isNavigationBarHidden = false
                             self.loginViewController.view.isHidden = true
                             self.showStudentPoints()
                         } else {
                             // TODO - popup alert
+                            print(res)
                             print("ERROR : Cannot connect to server")
                         }
                     })

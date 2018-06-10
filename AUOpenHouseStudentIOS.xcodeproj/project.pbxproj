@@ -20,6 +20,11 @@
 		1F00CE5A20CAD501003B1FC5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE5920CAD501003B1FC5 /* MainViewController.swift */; };
 		1F00CE5C20CAE144003B1FC5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE5B20CAE144003B1FC5 /* LoginViewController.swift */; };
 		1F00CE6120CAFB26003B1FC5 /* RestApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00CE6020CAFB25003B1FC5 /* RestApiProvider.swift */; };
+		1FF8B29A20CD530500950C9F /* UpEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8B29920CD530500950C9F /* UpEventsViewController.swift */; };
+		1FF8B29C20CD531700950C9F /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8B29B20CD531700950C9F /* MyEventsViewController.swift */; };
+		1FF8B29E20CD5DCC00950C9F /* MyEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8B29D20CD5DCC00950C9F /* MyEventTableViewCell.swift */; };
+		1FF8B2A020CD78BA00950C9F /* UpEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8B29F20CD78BA00950C9F /* UpEventTableViewCell.swift */; };
+		1FF8B2A220CD7B4B00950C9F /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8B2A120CD7B4B00950C9F /* EventDetailViewController.swift */; };
 		1FFC942520CBEFD800F781AA /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC942420CBEFD800F781AA /* PersistenceService.swift */; };
 		1FFC942C20CC000B00F781AA /* Major+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC942620CC000B00F781AA /* Major+CoreDataClass.swift */; };
 		1FFC942D20CC000B00F781AA /* Major+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC942720CC000B00F781AA /* Major+CoreDataProperties.swift */; };
@@ -48,6 +53,11 @@
 		1F00CE5920CAD501003B1FC5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1F00CE5B20CAE144003B1FC5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F00CE6020CAFB25003B1FC5 /* RestApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiProvider.swift; sourceTree = "<group>"; };
+		1FF8B29920CD530500950C9F /* UpEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpEventsViewController.swift; sourceTree = "<group>"; };
+		1FF8B29B20CD531700950C9F /* MyEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
+		1FF8B29D20CD5DCC00950C9F /* MyEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventTableViewCell.swift; sourceTree = "<group>"; };
+		1FF8B29F20CD78BA00950C9F /* UpEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpEventTableViewCell.swift; sourceTree = "<group>"; };
+		1FF8B2A120CD7B4B00950C9F /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		1FFC942420CBEFD800F781AA /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		1FFC942620CC000B00F781AA /* Major+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Major+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1FFC942720CC000B00F781AA /* Major+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Major+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -136,6 +146,8 @@
 			children = (
 				1F00CE4F20CABBC1003B1FC5 /* SideMenuTableViewController.swift */,
 				1FFC943220CC056400F781AA /* FacultyTableViewCell.swift */,
+				1FF8B29F20CD78BA00950C9F /* UpEventTableViewCell.swift */,
+				1FF8B29D20CD5DCC00950C9F /* MyEventTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +160,9 @@
 				1F00CE5320CAD233003B1FC5 /* BulletinViewController.swift */,
 				1FFC943420CC0A2400F781AA /* FacultyDetailViewController.swift */,
 				1F00CE5720CAD260003B1FC5 /* EventsViewController.swift */,
+				1FF8B29920CD530500950C9F /* UpEventsViewController.swift */,
+				1FF8B29B20CD531700950C9F /* MyEventsViewController.swift */,
+				1FF8B2A120CD7B4B00950C9F /* EventDetailViewController.swift */,
 				1F00CE5B20CAE144003B1FC5 /* LoginViewController.swift */,
 			);
 			path = Controllers;
@@ -317,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F00CE5820CAD260003B1FC5 /* EventsViewController.swift in Sources */,
+				1FF8B29C20CD531700950C9F /* MyEventsViewController.swift in Sources */,
 				1F00CE3920CAA7A9003B1FC5 /* AUOpenHouseStudentIOS.xcdatamodeld in Sources */,
 				1F00CE6120CAFB26003B1FC5 /* RestApiProvider.swift in Sources */,
 				1F00CE4E20CABB64003B1FC5 /* ContainerViewController.swift in Sources */,
@@ -324,14 +340,18 @@
 				1F00CE3120CAA7A9003B1FC5 /* AppDelegate.swift in Sources */,
 				1FFC943120CC000B00F781AA /* Event+CoreDataProperties.swift in Sources */,
 				1FFC942D20CC000B00F781AA /* Major+CoreDataProperties.swift in Sources */,
+				1FF8B29A20CD530500950C9F /* UpEventsViewController.swift in Sources */,
 				1FFC943020CC000B00F781AA /* Event+CoreDataClass.swift in Sources */,
 				1FFC942E20CC000B00F781AA /* Faculty+CoreDataClass.swift in Sources */,
 				1FFC942520CBEFD800F781AA /* PersistenceService.swift in Sources */,
+				1FF8B2A220CD7B4B00950C9F /* EventDetailViewController.swift in Sources */,
 				1F00CE5C20CAE144003B1FC5 /* LoginViewController.swift in Sources */,
 				1FFC943520CC0A2400F781AA /* FacultyDetailViewController.swift in Sources */,
 				1F00CE5020CABBC1003B1FC5 /* SideMenuTableViewController.swift in Sources */,
 				1F00CE5420CAD233003B1FC5 /* BulletinViewController.swift in Sources */,
 				1FFC942C20CC000B00F781AA /* Major+CoreDataClass.swift in Sources */,
+				1FF8B29E20CD5DCC00950C9F /* MyEventTableViewCell.swift in Sources */,
+				1FF8B2A020CD78BA00950C9F /* UpEventTableViewCell.swift in Sources */,
 				1FFC943320CC056400F781AA /* FacultyTableViewCell.swift in Sources */,
 				1F00CE5A20CAD501003B1FC5 /* MainViewController.swift in Sources */,
 			);
