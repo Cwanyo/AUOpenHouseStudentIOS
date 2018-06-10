@@ -10,7 +10,7 @@ The application that allow students to access and view informations.
 
 ### Bulletin
 - Show information of faculties and majors
-- Show location on the google map
+- Show location on the mapkit
 
 ### Event
 - View the list of upcoming events
