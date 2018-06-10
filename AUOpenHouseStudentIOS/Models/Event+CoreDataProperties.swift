@@ -29,7 +29,7 @@ extension Event {
     @NSManaged public var name: String?
     @NSManaged public var state: Int16
     @NSManaged public var tid: Int32
-    @NSManaged public var time_end: NSDate?
-    @NSManaged public var time_start: NSDate?
+    @NSManaged public var time_end: String?
+    @NSManaged public var time_start: String?
 
 }

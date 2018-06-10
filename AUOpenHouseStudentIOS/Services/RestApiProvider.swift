@@ -58,7 +58,7 @@ class RestApiProvider {
             switch response.result {
             case .success(let json):
                 print("API: getMyPoints")
-                               
+                
                 var json = JSON(json)
                 
                 if let points = json[0]["Points"].int {
@@ -180,5 +180,91 @@ class RestApiProvider {
             }
         }
     }
+    
+    static func getUpEvents(completion: @escaping (Bool,[Event]) -> ()) {
+        let path = url+"/upevents"
+        
+        Alamofire.request(path, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let json):
+                print("API: getUpEvents")
+                
+                var tempE = [Event]()
+                
+                if let json = JSON(json).array {
+                    for j in json {
+                        let e = Event(context: PresistenceService.context)
+                        
+                        if let eid = j["EID"].int32 {
+                            e.eid = eid
+                        }
+                        if let fid = j["FID"].int32 {
+                            e.fid = fid
+                        }
+                        if let faculty_name = j["Faculty_Name"].string {
+                            e.faculty_name = faculty_name
+                        }
+                        if let icon = j["Icon"].url {
+                            e.icon = icon
+                        }
+                        if let image = j["Image"].url {
+                            e.image = image
+                        }
+                        if let info = j["Info"].string {
+                            e.info = info
+                        }
+                        if let lat = j["Location_Latitude"].double {
+                            e.location_latitude = lat
+                        }
+                        if let lon = j["Location_Longitude"].double {
+                            e.location_longitude = lon
+                        }
+                        if let mid = j["MID"].int32 {
+                            e.mid = mid
+                        }
+                        if let name = j["Major_Name"].string {
+                            e.major_name = name
+                        }
+                        if let name = j["Name"].string {
+                            e.name = name
+                        }
+                        if let state = j["State"].int16 {
+                            e.state = state
+                        }
+                        if let tid = j["TID"].int32 {
+                            e.tid = tid
+                        }
+                        if let time_start = j["Time_Start"].string {
+                            e.time_start = time_start
+                        }
+                        if let time_end = j["Time_End"].string {
+                            e.time_end = time_end
+                        }
+                        
+                        // print(e)
+                        // TODO - save core data
+                        // PresistenceService.saveContext()
+                        tempE.append(e)
+                    }
+                    
+                    completion(true, tempE)
+                }
+                
+            case .failure(let error):
+                print("API Error: getUpEvents", error)
+                completion(false, [Event]())
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
