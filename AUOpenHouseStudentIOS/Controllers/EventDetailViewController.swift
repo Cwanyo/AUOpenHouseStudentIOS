@@ -126,8 +126,9 @@ class EventDetailViewController: UIViewController, MKMapViewDelegate {
         annotation.coordinate = CLLocationCoordinate2D(latitude: pinLocation.coordinate.latitude, longitude: pinLocation.coordinate.longitude)
         mp_location.addAnnotation(annotation)
     }
-    
 
-   
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let ChatVC = segue.destination as? ChatViewController else {return}
+        ChatVC.event = event
+    }
 }
