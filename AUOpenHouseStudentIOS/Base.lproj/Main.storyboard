@@ -223,15 +223,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-D4-zjv">
-                                <rect key="frame" x="166" y="306" width="37" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abac1" translatesAutoresizingMaskIntoConstraints="NO" id="ent-2k-1WM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="qIa-at-nZH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome,  userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5q-r5-2bi">
+                                <rect key="frame" x="16" y="272" width="197.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lxq-9o-ZGQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h5q-r5-2bi" secondAttribute="trailing" constant="139" id="AFo-uU-wQM"/>
+                            <constraint firstItem="h5q-r5-2bi" firstAttribute="leading" secondItem="Lxq-9o-ZGQ" secondAttribute="leading" constant="16" id="B0C-EK-QO1"/>
+                            <constraint firstItem="ent-2k-1WM" firstAttribute="trailing" secondItem="Lxq-9o-ZGQ" secondAttribute="trailing" id="jZk-is-gei"/>
+                            <constraint firstItem="ent-2k-1WM" firstAttribute="top" secondItem="Lxq-9o-ZGQ" secondAttribute="top" id="q4b-q6-3aC"/>
+                            <constraint firstItem="h5q-r5-2bi" firstAttribute="top" secondItem="ent-2k-1WM" secondAttribute="bottom" constant="8" id="vYv-Sh-Cy8"/>
+                            <constraint firstItem="ent-2k-1WM" firstAttribute="leading" secondItem="Lxq-9o-ZGQ" secondAttribute="leading" id="xOg-zx-brl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lxq-9o-ZGQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="dlT-Rm-s5H">
@@ -242,13 +255,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="lb_userName" destination="h5q-r5-2bi" id="ze2-DU-VXS"/>
                         <segue destination="MaX-RX-DBH" kind="show" identifier="showBulletin" id="6yk-Aj-pxt"/>
                         <segue destination="eDG-Ca-J62" kind="show" identifier="showEvents" id="Cs1-jh-JrX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zku-TZ-Y0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="117"/>
+            <point key="canvasLocation" x="1685.5999999999999" y="116.49175412293854"/>
         </scene>
         <!--Bulletin View Controller-->
         <scene sceneID="3IX-VU-LN8">
@@ -1110,6 +1124,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="abac1" width="1000" height="668"/>
         <image name="bulletin" width="29" height="30"/>
         <image name="events" width="30" height="30"/>
         <image name="logout" width="29" height="30"/>

@@ -12,6 +12,8 @@ import Alamofire
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var lb_userName: UILabel!
+    
     var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
@@ -39,6 +41,8 @@ class MainViewController: UIViewController {
                         print("ERROR : geting token",error)
                         return;
                     }
+                    
+                    self.lb_userName.text = "Welcome, \(user?.displayName ?? "unknow")"
                     
                     RestApiProvider.login(idToken: idToken!, completion: { (res) in
                         if res.isSuccess {
