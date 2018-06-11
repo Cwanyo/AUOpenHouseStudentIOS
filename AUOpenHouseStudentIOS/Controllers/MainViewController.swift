@@ -11,7 +11,7 @@ import GoogleSignIn
 import Alamofire
 
 class MainViewController: UIViewController {
-    
+        
     @IBOutlet weak var lb_userName: UILabel!
     
     var handle: AuthStateDidChangeListenerHandle?
@@ -29,7 +29,6 @@ class MainViewController: UIViewController {
                 print("Firebase: not login")
                 self.navigationController?.isNavigationBarHidden = true
                 self.loginViewController.view.isHidden = false
-                
             }else{
                 // user already logged in firebase
                 print("Firebase: logged in")
@@ -42,12 +41,12 @@ class MainViewController: UIViewController {
                         return;
                     }
                     
+                    self.navigationController?.isNavigationBarHidden = false
+                    self.loginViewController.view.isHidden = true
                     self.lb_userName.text = "Welcome, \(user?.displayName ?? "unknow")"
                     
                     RestApiProvider.login(idToken: idToken!, completion: { (res) in
                         if res.isSuccess {
-                            self.navigationController?.isNavigationBarHidden = false
-                            self.loginViewController.view.isHidden = true
                             self.showStudentPoints()
                         } else {
                             // TODO - popup alert

@@ -58,10 +58,6 @@ class RestApiProvider {
         }
     }
     
-    static func temp(completion: @escaping (Bool) -> ()) {
-        
-    }
-    
     static func getMyPoints(completion: @escaping (Bool,Int) -> ()) {
         let path = url+"/mygamepoints"
         
@@ -92,6 +88,9 @@ class RestApiProvider {
             switch response.result {
             case .success(let json):
                 print("API: getFaculties")
+                
+                // remove old coredata
+                PresistenceService.deleteFaculties()
                 
                 var tempF = [Faculty]()
                 
@@ -130,9 +129,8 @@ class RestApiProvider {
                             f.website = web
                         }
                         
-                        // print(f)
                         // TODO - save core data
-                        // PresistenceService.saveContext()
+                        PresistenceService.saveContext()
                         tempF.append(f)
                     }
                     
@@ -141,7 +139,7 @@ class RestApiProvider {
                 
             case .failure(let error):
                 print("API Error: getFaculties", error)
-                completion(false, [Faculty]())
+                completion(false, PresistenceService.loadFaculties())
             }
         }
     }
@@ -176,9 +174,6 @@ class RestApiProvider {
                             m.website = web
                         }
                         
-                        // print(m)
-                        // TODO - save core data
-                        // PresistenceService.saveContext()
                         tempM.append(m)
                     }
                     
@@ -339,6 +334,7 @@ class RestApiProvider {
                 
             case .failure(let error):
                 print("API Error: getMyEvents", error)
+                // completion(false, PresistenceService.loadMyEvents())
                 completion(false, [Event]())
             }
         }

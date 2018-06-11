@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import CoreData
 
 class BulletinViewController: UIViewController {
 
@@ -36,13 +37,14 @@ class BulletinViewController: UIViewController {
             if s {
                 self.faculties = f
             } else {
-                // load from coredata
+                // get from coredata
+                self.faculties = f
             }
             self.tb_faculties.reloadData()
             self.refreshControl.endRefreshing()
         }
     }
-
+    
 }
 
 extension BulletinViewController: UITableViewDataSource, UITableViewDelegate {

@@ -39,7 +39,8 @@ class MyEventsViewController: UIViewController {
             if s {
                 self.myevents = e
             } else {
-                // load from coredata
+                // get from coredata
+                self.myevents = e
             }
             self.tb_myevents.reloadData()
             self.refreshControl.endRefreshing()

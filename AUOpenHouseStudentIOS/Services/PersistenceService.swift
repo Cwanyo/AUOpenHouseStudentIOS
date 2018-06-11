@@ -62,4 +62,66 @@ class PresistenceService {
         }
     }
     
+    static func loadFaculties() -> [Faculty] {
+        let fetchRequest: NSFetchRequest<Faculty> = Faculty.fetchRequest()
+        do {
+            let f = try context.fetch(fetchRequest)
+            print("CoreData : loadFaculties")
+            return f
+        } catch(let err) {
+            print("CoreData Error: loadFaculties", err)
+            return [Faculty]()
+        }
+    }
+    
+    static func deleteFaculties(){
+        
+        let fetchRequest: NSFetchRequest<Faculty> = Faculty.fetchRequest()
+        
+        do {
+            if let result = try? PresistenceService.context.fetch(fetchRequest) {
+                for object in result {
+                    context.delete(object)
+                }
+            }
+            
+            try context.save()
+            print("CoreData : deleteFaculties")
+        } catch(let err){
+            print("CoreData Error: deleteFaculties", err)
+        }
+        
+    }
+    
+    static func loadMyEvents() -> [Event] {
+        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        do {
+            let e = try context.fetch(fetchRequest)
+            print("CoreData : loadMyEvents")
+            return e
+        } catch(let err) {
+            print("CoreData Error: loadMyEvents", err)
+            return [Event]()
+        }
+    }
+    
+    static func deleteMyEvents(){
+        
+        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        
+        do {
+            if let result = try? PresistenceService.context.fetch(fetchRequest) {
+                for object in result {
+                    context.delete(object)
+                }
+            }
+            
+            try context.save()
+            print("CoreData : deleteMyEvents")
+        } catch(let err){
+            print("CoreData Error: deleteMyEvents", err)
+        }
+        
+    }
+    
 }
