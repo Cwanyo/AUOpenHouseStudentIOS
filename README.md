@@ -4,7 +4,7 @@ This ios application is a part of the IOS Application Development (CS 3432) proj
 
 # Description
 
-The application that allow students to access and view informations.
+The application that allow students to access and view informations during AU open house event.
 
 # Features
 
@@ -16,6 +16,15 @@ The application that allow students to access and view informations.
 - View the list of upcoming events
 - Join and Leave the event
 - Live Chat
+
+### API
+- [AuOpenHouseAPI](https://github.com/Cwanyo/AuOpenHouseAPI) - RESTful web services for AU open house
+
+### Libraries
+- [Firebase](https://firebase.google.com/docs/storage/ios/start) - Used for authentication, realtime database, cloud storage
+- [Kingfisher](https://github.com/onevcat/Kingfisher) - Used for downloading and caching images
+- [Alamofire](https://github.com/Alamofire/Alamofire) - Used for HTTP request
+- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - Used for handling JSON data 
 
 # Contributors
 - Chatchawan Yoojuie
