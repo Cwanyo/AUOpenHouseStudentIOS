@@ -22,6 +22,8 @@ The application that allow students to access and view informations during AU op
 
 ### Libraries
 - [Firebase](https://firebase.google.com/docs/storage/ios/start) - Used for authentication, realtime database, cloud storage
+- [CoreData](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/) - Used for storing data
+- [MapKit](https://developer.apple.com/documentation/mapkit) - Used for display location
 - [Kingfisher](https://github.com/onevcat/Kingfisher) - Used for downloading and caching images
 - [Alamofire](https://github.com/Alamofire/Alamofire) - Used for HTTP request
 - [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - Used for handling JSON data 
