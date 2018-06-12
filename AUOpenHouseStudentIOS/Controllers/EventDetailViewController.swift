@@ -62,24 +62,75 @@ class EventDetailViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
     @IBAction func onEventClick(_ sender: UIButton) {
-        // TODO - alert user
+        // alert user
         if checkAttend {
             // leave event
-            RestApiProvider.leaveEvent(tid: (event?.tid)!) { (res) in
-                // TODO - show to user
-                print(res)
-                self.checkEventAttend()
-            }
+            let alert = UIAlertController(title: "Alert!", message: "Are you sure that you want to leave this event?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                self.showLoading()
+                RestApiProvider.leaveEvent(tid: (self.event?.tid)!) { (res) in
+                    // show to user
+                    self.checkEventAttend()
+                    self.hideLoading()
+                    self.createAlert(title: "Alert", message: res.message)
+                }
+            }))
+            
+            alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
         } else {
             // join event
-            RestApiProvider.joinEvent(tid: (event?.tid)!) { (res) in
-                // TODO - show to user
-                print(res)
-                self.checkEventAttend()
-            }
+            let alert = UIAlertController(title: "Alert!", message: "Are you sure that you want to join this event?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                self.showLoading()
+                RestApiProvider.joinEvent(tid: (self.event?.tid)!) { (res) in
+                    // show to user
+                    self.checkEventAttend()
+                    self.hideLoading()
+                    self.createAlert(title: "Alert", message: res.message)
+                }
+            }))
+            
+            alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    func hideLoading(){
+        activityIndicator.stopAnimating()
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
+    
+    func showLoading(){
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        self.view.addSubview(activityIndicator)
+
+        activityIndicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+    
+    func createAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func showEvenDetails(){

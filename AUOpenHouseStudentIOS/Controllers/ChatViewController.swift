@@ -190,7 +190,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // TODO - check message from user or others
+        // check message from user or others
         
         if chats[indexPath.row].specialMessage {
             // If non message - join & leave events

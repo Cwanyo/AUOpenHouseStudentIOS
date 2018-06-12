@@ -13,13 +13,23 @@ import Alamofire
 class MainViewController: UIViewController {
         
     @IBOutlet weak var lb_userName: UILabel!
+    @IBOutlet weak var lb_date: UILabel!
     
     var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setDate()
         createObserver()
+    }
+    
+    func setDate(){
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        let newDate = dateFormatter.string(from: date)
+        lb_date.text = "Today: " + newDate
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,19 +55,40 @@ class MainViewController: UIViewController {
                     self.loginViewController.view.isHidden = true
                     self.lb_userName.text = "Welcome, \(user?.displayName ?? "unknow")"
                     
-                    RestApiProvider.login(idToken: idToken!, completion: { (res) in
-                        if res.isSuccess {
-                            self.showStudentPoints()
-                        } else {
-                            // TODO - popup alert
-                            print(res)
-                            print("ERROR : Cannot connect to server")
-                        }
-                    })
+                    self.loginAPI(idToken: idToken!)
                 }
                 
             }
         }
+    }
+    
+    func loginAPI(idToken: String){
+        RestApiProvider.login(idToken: idToken, completion: { (res) in
+            if res.isSuccess {
+                self.showStudentPoints()
+            } else {
+                // popup alert
+                print(res)
+                print("ERROR : Cannot connect to server")
+                
+                self.createAlert(title: "Alert!", message: "Cannot connect to server, some function might not available.")
+            }
+        })
+    }
+    
+    func createAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Logout", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            self.logout()
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
