@@ -129,7 +129,6 @@ class RestApiProvider {
                             f.website = web
                         }
                         
-                        // TODO - save core data
                         PresistenceService.saveContext()
                         tempF.append(f)
                     }
@@ -248,7 +247,6 @@ class RestApiProvider {
                         }
                         
                         // print(e)
-                        // TODO - save core data
                         // PresistenceService.saveContext()
                         tempE.append(e)
                     }
@@ -324,7 +322,6 @@ class RestApiProvider {
                         }
                         
                         // print(e)
-                        // TODO - save core data
                         // PresistenceService.saveContext()
                         tempE.append(e)
                     }
