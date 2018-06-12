@@ -13,13 +13,23 @@ import Alamofire
 class MainViewController: UIViewController {
         
     @IBOutlet weak var lb_userName: UILabel!
+    @IBOutlet weak var lb_date: UILabel!
     
     var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setDate()
         createObserver()
+    }
+    
+    func setDate(){
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        let newDate = dateFormatter.string(from: date)
+        lb_date.text = "Today: " + newDate
     }
     
     override func viewWillAppear(_ animated: Bool) {
