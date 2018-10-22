@@ -28,7 +28,11 @@ The application that allow students to access and view informations during AU op
 - [Alamofire](https://github.com/Alamofire/Alamofire) - Used for HTTP request
 - [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - Used for handling JSON data 
 
+### Note 
+- Need to be updated according to the new changes in API
+
 # Contributors
 - Chatchawan Yoojuie
 - Pannachet Lertananta
 - Sai Kham Sheng
+
